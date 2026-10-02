@@ -1,0 +1,17 @@
+RENDER KURULUMU - PAPER TRADING
+
+Bu proje web sitesi değil, sürekli çalışan Python trading botudur.
+Render üzerinde Background Worker olarak dağıtılır.
+
+1. ZIP'i çıkarın ve içindeki crypto_trading_bot klasöründeki dosyaları
+   GitHub deposunun köküne yükleyin.
+2. Render > New + > Blueprint ile GitHub deposunu bağlayın.
+3. Render render.yaml dosyasını okuyarak worker oluşturur.
+4. İlk çalıştırmayı yalnızca sanal işlem (PAPER_TRADING=true) ile yapın.
+5. Logları Render panelinden takip edin.
+
+API anahtarlarını GitHub'a koymayın. Gerekirse Render Environment
+bölümüne gizli değişken olarak ekleyin. Bu yapı paper modda başlar.
+Render dosya sistemi kalıcı olmayabilir; SQLite/CSV kayıtları yeniden
+başlatma sonrası kaybolabilir. Worker planı ücretli olabilir.
+Bot kâr garantisi vermez; canlı işlem önemli kayıp riski taşır.

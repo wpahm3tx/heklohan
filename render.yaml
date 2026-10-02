@@ -1,0 +1,27 @@
+services:
+  - type: worker
+    name: crypto-trading-bot-paper
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: PAPER_TRADING
+        value: "true"
+      - key: EXCHANGE
+        value: binance
+      - key: SYMBOLS
+        value: BTC/USDT,ETH/USDT
+      - key: TIMEFRAME
+        value: 15m
+      - key: STARTING_BALANCE
+        value: "1000"
+      - key: RISK_PER_TRADE
+        value: "0.01"
+      - key: MAX_OPEN_POSITIONS
+        value: "2"
+      - key: STOP_LOSS_PCT
+        value: "0.015"
+      - key: TAKE_PROFIT_PCT
+        value: "0.03"
+      - key: POLL_SECONDS
+        value: "30"
